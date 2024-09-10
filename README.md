@@ -11,7 +11,7 @@ Si desean clonar este repositorio que solo viene preparado para la version de pa
 ```bash
 sudo rm -rf LCD-show
 git clone https://github.com/Shinigamy19/RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
-chmod -R 755 RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
+chmod -R 755 LCD-show
 cd RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
 ```
 
@@ -140,7 +140,7 @@ sudo ./LCD-hdmi
 
 Si estas usando este repo:
 ```bash
-chmod -R 755 RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
+chmod -R 755 LCD-show
 cd RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
 sudo ./LCD-hdmi
 ```
