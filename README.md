@@ -69,7 +69,7 @@ sudo rm /usr/share/X11/xorg.conf.d/20-noglamor.conf
 sudo systemctl restart lightdm
 ```
 
-Con esto detenemos el proceso de Glamor que genera que en dispositivos de hasta un 1gb de ram se detengan procesos, concretamente uno de los processos afectados es el que corresponde con el controlador de pantalla. Por eso al desactivarlo la pantalla inicia normalmente.
+Con esto detenemos el proceso de Glamor que genera que en dispositivos de hasta  1gb de ram se detengan procesos, concretamente uno de los afectados es el que corresponde con el controlador de pantalla. Por eso al desactivarlo la pantalla inicia normalmente.
 > Mas información al final del post.
 
 Recorda que `dtoverlay=vc4-kms-v3d` debe estar comentado en /boot/config.txt.
@@ -103,9 +103,9 @@ framebuffer_width=960
 framebuffer_height=640
 ```
 
-Para guaradar el documento apretamos Control (cmd) + O y luego Control + X
+Para guardar el documento apretamos Control (cmd) + O y luego Control + X
 
-Deje varias para que elijan la que necesiten.
+Deje varias resoluciones para que elijan la que necesiten.
 Recuerden que para que los cambios hagan efecto tiene que hacer un:
 
 ```bash
