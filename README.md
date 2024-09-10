@@ -1,12 +1,20 @@
 # RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
-Error pantalla con _ parpadeante. Solucion. SO 64bits y 32bits.
+Error pantalla con _ parpadeante. Solución. SO 64bits y 32bits.
 
-Esto fue testeado en la version Bookworm y Bullseye tanto de 32 como de 64 bits.
-El error se repite en otros tipos de pantalla pero el procedimiento seria el mismo.
+Esto fue testeado en la versión Bookworm y Bullseye tanto de 32 como de 64 bits.
+El error se repite en otros tipos de pantalla, pero el procedimiento seria el mismo.
 
-Si te gustaria ver un video sobre como lo solucione da click aca:
+<div align="center">
 
-Si desean clonar este repositorio que solo viene preparado para la version de pantalla que se encuentra en el titulo pueden reemplarzar el primer comando por:
+<h3>Si te gustaría ver un video sobre como lo solucione da click acá:</h3>
+
+<a href="https://www.youtube.com/playlist?list=PLALOGywm7ZvKogWQI3DMRurd-eRrUEfHb"><img alt="Tutorial" src="Raspberry.png" width="500" /></a>
+<br>
+***No te olvides de suscribirte y dar me gusta.***
+
+</div>
+
+Si desean clonar este repositorio que solo viene preparado para la versión de pantalla que se encuentra en el titulo pueden reemplazar el primer comando por:
 
 ```bash
 sudo rm -rf LCD-show
@@ -15,23 +23,22 @@ chmod -R 755 LCD-show
 cd RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
 ```
 
-Aunque este sea mas ligero ya que solo tiene este controlador, recomiendo usar el oficial.
+Aunque este sea más ligero ya que solo tiene este controlador, recomiendo usar el oficial.
 
-> Voy a dejar mas informacion respecto de todo el proceso al final del post.
-
+> Voy a dejar más información respecto de todo el proceso al final del post.
 
 # Requisitos
 
 - Montar la imagen de Raspberry pi os (ex raspbian) con Pinn Multiboot, montando una imagen o usando la herramienta de <a href="https://www.raspberrypi.com/software/">Raspberry Software</a> 
 
-- Conexion por hdmi, un teclado y mouse para primer inicio del OS. (Despues lo pueden usar remoto o via ssh)
+- Conexión por hdmi, un teclado y mouse para primer inicio del OS. (Después lo pueden usar remoto o vía ssh)
 
-- Contar con conexion a internet en su Raspberry Pi.
+- Contar con conexión a internet en su Raspberry Pi.
 
 - Tener habilitado SSH y SPI.
 
-Yo utilizo <a href="https://www.putty.org/">Putty</a> y <a href="https://www.realvnc.com/es/connect/download/viewer/">VNC Viewer</a> para mayor comododidad.
-Tambien les dejo un teclado en pantalla por si necesitan.
+Yo utilizo <a href="https://www.putty.org/">Putty</a> y <a href="https://www.realvnc.com/es/connect/download/viewer/">VNC Viewer</a> para mayor comodidad.
+También les dejo un teclado en pantalla por si necesitan.
 
 ```bash
 sudo apt-get install update
@@ -46,8 +53,8 @@ git clone https://github.com/goodtft/LCD-show.git
 chmod -R 755 LCD-show
 ```
 
-Antes de continuar no se olviden de tener activa la coneccion por ssh ya que al hacer esto la interface de nuestro OS no se volvera a mostrar hasta que hayamos configurado todo lo posterior.
-En caso de no ser posible una conexion mediante ssh, despues de hacer el siguiente paso podrian poner la memoria en su sistema operativo y descomentar la linea `dtoverlay=vc4-kms-v3d` para volver a ver la pantalla HDMI. (Hay que recordar volver a comentarlo una vez se solucione el problema de la pantalla de 3.5)
+Antes de continuar no se olviden de tener activa la conexión por ssh ya que al hacer esto la interface de nuestro OS no se volverá a mostrar hasta que hayamos configurado todo lo posterior.
+En caso de no ser posible una conexión mediante ssh, después de hacer el siguiente paso podrían poner la memoria en su sistema operativo y des comentar la línea `dtoverlay=vc4-kms-v3d` para volver a ver la pantalla HDMI. (Hay que recordar volver a comentarlo una vez se solucione el problema de la pantalla de 3.5)
 
 ```bash
 cd LCD-show/
@@ -63,17 +70,17 @@ sudo systemctl restart lightdm
 ```
 
 Con esto detenemos el proceso de Glamor que genera que en dispositivos de hasta un 1gb de ram se detengan procesos, concretamente uno de los processos afectados es el que corresponde con el controlador de pantalla. Por eso al desactivarlo la pantalla inicia normalmente.
-> Mas informacuon al final del post.
+> Mas información al final del post.
 
 Recorda que `dtoverlay=vc4-kms-v3d` debe estar comentado en /boot/config.txt.
 
-Para cambiar la resolucion ejecutamos:
+Para cambiar la resolución ejecutamos:
 
 ```bash
 sudo nano /boot/config.txt
 ```
 
-al final de todo este documento agregamos cualquiera de estas resoluciones y la descomentamos.
+al final de todo este documento agregamos cualquiera de estas resoluciones y la des comentamos.
 
 ```bash
 #framebuffer_width=720
@@ -127,10 +134,9 @@ cd RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
 sudo ./rotate.sh 90
 ```
 
-Y eso seria todo lo que hay que hacer.
+Y eso sería todo lo que hay que hacer.
 
-
-Si por alguna razon ya no quieren usar su pantalla de 3.5 pulgadas pueden ejecutar el siguiente comando y funcionara con el hdmi.
+Si por alguna razón ya no quieren usar su pantalla de 3.5 pulgadas pueden ejecutar el siguiente comando y funcionara con el hdmi.
 
 ```bash
 chmod -R 755 LCD-show
@@ -146,7 +152,6 @@ sudo ./LCD-hdmi
 ```
 
 # Queres apoyarme:
-
 
 <h3 align="center">Mis redes sociales:</h3>
 <p align="center">
@@ -176,10 +181,9 @@ sudo ./LCD-hdmi
 <a href='https://cafecito.app/shinigamy19' rel='noopener' target='_blank'><img srcset='https://cdn.cafecito.app/imgs/buttons/button_6.png 1x, https://cdn.cafecito.app/imgs/buttons/button_6_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_6_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_6.png' alt='Invitame un café en cafecito.app' title="Donaciones Por Cafecito"/></a></p>
 </div>
 
-
 # Creditos
 
-Toda la documentacion relacionada la pueden encontrar en:
+Toda la documentación relacionada la pueden encontrar en:
 https://github.com/goodtft/LCD-show/
 
 Los overlays de este repositorio fueron obtenidos de dicho directorio.
@@ -187,6 +191,7 @@ Los overlays de este repositorio fueron obtenidos de dicho directorio.
 Si tenes una pantalla Waveshare:
 https://github.com/waveshare/LCD-show.git
 
-Tambien les dejo este pequeño foro de donde saque la informacion del proceso Glamor.
+También les dejo este pequeño foro de donde saque la información del proceso Glamor.
 https://github.com/goodtft/LCD-show/issues/369
+
 
