@@ -8,7 +8,7 @@ El error se repite en otros tipos de pantalla, pero el procedimiento seria el mi
 
 <h3>Si te gustaría ver un video sobre como lo solucione da click acá:</h3>
 
-<a href="https://www.youtube.com/playlist?list=PLALOGywm7ZvKogWQI3DMRurd-eRrUEfHb"><img alt="Tutorial" src="Raspberry.png" width="500" /></a>
+<a href="https://youtu.be/3FgEISmO2sI"><img alt="Tutorial" src="Raspberry.png" width="500" /></a>
 <br>
 ***No te olvides de suscribirte y dar me gusta.***
 
