@@ -1,4 +1,4 @@
-# Raspberry3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
+# RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
 Error pantalla con _ parpadeante. Solucion. SO 64bits y 32bits.
 
 Esto fue testeado en la version Bookworm y Bullseye tanto de 32 como de 64 bits.
@@ -10,9 +10,9 @@ Si desean clonar este repositorio que solo viene preparado para la version de pa
 
 ```bash
 sudo rm -rf LCD-show
-git clone https://github.com/Shinigamy19/Raspberry3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
-chmod -R 755 Raspberry3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
-cd Raspberry3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
+git clone https://github.com/Shinigamy19/RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
+chmod -R 755 RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
+cd RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
 ```
 
 Aunque este sea mas ligero ya que solo tiene este controlador, recomiendo usar el oficial.
@@ -123,7 +123,7 @@ sudo ./rotate.sh 90
 con mi repo:
 
 ```bash
-cd Raspberry3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
+cd RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
 sudo ./rotate.sh 90
 ```
 
@@ -140,8 +140,8 @@ sudo ./LCD-hdmi
 
 Si estas usando este repo:
 ```bash
-chmod -R 755 Raspberry3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
-cd Raspberry3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
+chmod -R 755 RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046
+cd RaspberryPi3bplus-3.5inch-displayA-ILI9486-MPI3501-XPT2046/
 sudo ./LCD-hdmi
 ```
 
